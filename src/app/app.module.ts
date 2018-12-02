@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AnswersComponent } from './answers/answers.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: MainComponent},
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     MainComponent,
     QuestionsComponent,
     PageNotFoundComponent,
-    AnswersComponent
+    AnswersComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
