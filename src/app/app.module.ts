@@ -12,6 +12,7 @@ import { AnswersComponent } from './answers/answers.component';
 const appRoutes: Routes = [
   {path: 'home', component: MainComponent},
   {path: 'questions', component: QuestionsComponent},
+  {path: 'answers/:id', component: AnswersComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];

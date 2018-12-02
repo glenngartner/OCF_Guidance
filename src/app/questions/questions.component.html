@@ -1,17 +1,16 @@
 <div class="row">
   <div class="col-sm">
     <hr>
-    <div *ngFor="let question of questions; let i = index;" class="row">
-      <a class="col-auto mx-auto my-4" href="/"
+    <div *ngFor="let QandA of questionAndAnswers; let i = index;" class="row">
+      <a class="col-sm-auto mx-auto my-4" href="/answers/{{i}}"
          (mouseover)="onPointerOver(i)"
          (mouseleave)="onPointerOut(i)">
-        <div class="card"
-             [class.shadow]="!question.mouseOver"
-             [class.shadow-sm]="question.mouseOver"
+        <div class="card text-center"
+             [class.shadow]="!QandA.question.mouseOver"
+             [class.shadow-sm]="QandA.question.mouseOver"
         >
           <h3 class="card-body mx-auto"
-            [style.color]="gray"
-          >{{question.body}}</h3>
+          >{{QandA.question.body}}</h3>
         </div>
       </a>
     </div>

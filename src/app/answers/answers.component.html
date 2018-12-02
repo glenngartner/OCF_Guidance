@@ -1,3 +1,18 @@
-<p>
-  answers works!
-</p>
+<div class="row">
+  <div class="col-sm-auto">
+    <a (click)="gotToQuestions()">
+      <button class="btn btn-block my-2">< Back</button>
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="card mx-auto my-4 text-center">
+      <h3 class="card-header lead"><b>{{getAnswerTitle()}}</b></h3>
+      <h1 class="card-body lead">{{answer.body}}</h1>
+      <h4 class="card-footer text-center lead"><i>{{answer.scripture}}</i></h4>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>

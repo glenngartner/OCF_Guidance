@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Question} from '../generic/interfaces';
+import {Question, QuestionAndAnswer} from '../generic/interfaces';
+import {QAndAService} from '../services/q-and-a.service';
 
 @Component({
   selector: 'app-questions',
@@ -8,31 +9,21 @@ import {Question} from '../generic/interfaces';
 })
 export class QuestionsComponent implements OnInit {
 
-  public questionBodies = [
-    'I\'m struggling with relationships',
-    'My roommate is difficult to live with',
-    'How do I know God is real?',
-    'I\'m suffering',
-    'How can I share my faith?'
-  ];
+  public questionAndAnswers: QuestionAndAnswer[] = [];
 
-  public questions: Question[] = [];
-
-  constructor() {
+  constructor(private qandAService: QAndAService) {
   }
 
   ngOnInit() {
-    for (const questionBody of this.questionBodies) {
-      this.questions.push({body: questionBody, mouseOver: false});
-    }
+      this.questionAndAnswers = this.qandAService.questionsAndAnswers;
   }
 
   public onPointerOver(i: number) {
-    this.questions[i].mouseOver = true;
+    this.questionAndAnswers[i].question.mouseOver = true;
   }
 
   public onPointerOut(i: number) {
-    this.questions[i].mouseOver = false;
+    this.questionAndAnswers[i].question.mouseOver = false;
   }
 
 }
