@@ -1,3 +1,20 @@
-<p>
-  questions works!
-</p>
+<div class="row">
+  <div class="col-sm">
+    <hr>
+    <div *ngFor="let question of questions; let i = index;" class="row">
+      <a class="col-auto mx-auto my-4" href="/"
+         (mouseover)="onPointerOver(i)"
+         (mouseleave)="onPointerOut(i)">
+        <div class="card"
+             [class.shadow]="!question.mouseOver"
+             [class.shadow-sm]="question.mouseOver"
+        >
+          <h3 class="card-body mx-auto"
+            [style.color]="gray"
+          >{{question.body}}</h3>
+        </div>
+      </a>
+    </div>
+    <hr>
+  </div>
+</div>
