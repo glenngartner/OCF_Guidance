@@ -1,9 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-
-interface Question {
-  body: string;
-  mouseOver: boolean;
-}
+import {Question} from '../generic/interfaces';
 
 @Component({
   selector: 'app-questions',

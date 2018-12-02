@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AnswersComponent } from './answers/answers.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: MainComponent},
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     MainComponent,
     QuestionsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AnswersComponent
   ],
   imports: [
     BrowserModule,
