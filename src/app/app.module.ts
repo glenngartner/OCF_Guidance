@@ -6,10 +6,13 @@ import {AppComponent} from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  {path: '', component: MainComponent},
-  {path: 'questions', component: QuestionsComponent}
+  {path: 'home', component: MainComponent},
+  {path: 'questions', component: QuestionsComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 
@@ -18,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     MainComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
