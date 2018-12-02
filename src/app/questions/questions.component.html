@@ -2,7 +2,7 @@
   <div class="col-sm">
     <hr>
     <div *ngFor="let QandA of questionAndAnswers; let i = index;" class="row">
-      <a class="col-sm-auto mx-auto my-4" href="/answers/{{i}}"
+      <a class="col-sm-auto mx-auto my-3" href="/answers/{{i}}"
          (mouseover)="onPointerOver(i)"
          (mouseleave)="onPointerOut(i)">
         <div class="card text-center"
