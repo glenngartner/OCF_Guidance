@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ghp": "npx ngh --dir=dist/ocfGuidance"
+    "ghp": "npx ngh --dir=dist/ocfGuidance",
+    "prod": "ng build --prod --base-href /OCF_Guidance/"
   },
   "private": true,
   "dependencies": {

@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   {path: 'questions', component: QuestionsComponent},
   {path: 'answers/:id', component: AnswersComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', redirectTo: '/home'}
 ];
 
 
